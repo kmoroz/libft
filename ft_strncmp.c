@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcmp.c                                        :+:    :+:            */
+/*   ft_strncmp.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 14:35:26 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/29 14:35:26 by ksmorozo      ########   odam.nl         */
+/*   Created: 2020/11/01 18:14:12 by ksmorozo      #+#    #+#                 */
+/*   Updated: 2020/11/01 18:14:12 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
+int	ft_strncmp(const void *ptr1, const void *ptr2, size_t num)
 {
 	size_t	count;
 	char	*buffer1;
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	count = 0;
 	buffer1 = ptr1;
 	buffer2 = ptr2;
-	while (count != num)
+	while (count != num && buffer1[count] != '\0' && buffer2[count] != '\0')
 	{
 		if (buffer1[count] != buffer2[count])
 			return (buffer1[count] - buffer2[count]);
@@ -30,18 +30,11 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	return (0);
 }
 
-// int main()
-// {
-// 	char firt[] = "DWGaOtP12df0";
-// 	char second[] = "DWgAOTP12DF0";
-// 	printf("%d", ft_memcmp(firt, second, 13));
-// }
-
 int main()
 {
 	char s1[] = "atoms\0\0\0\0";  // extra null bytes at end
 	char s2[] = "atoms\0abc";     // embedded null byte
 	char s3[] = "atomsaaa";
 
-	int result = ft_memcmp(s1, s2, 8);
+	int result = ft_strncmp(s1, s2, 8);
 }
