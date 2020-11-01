@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                           :+:    :+:            */
+/*   ft_memmove.c                                           :+:    :+:        */
 /*                                                     +:+                    */
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
@@ -12,21 +12,29 @@
 
 #include <stdlib.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	char *buffer1;
-	char *buffer2;
+	char buffer2[n];
+	char *buffer3;
 	size_t count;
+	size_t new_count;
 
 	buffer1 = src;
-	buffer2 = dest;
+	buffer3 = dest;
 	count = 0;
+	new_count = 0;
 	while (count < n)
 	{
 		buffer2[count] = buffer1[count];
 		count++;
 	}
-	return (dest);
+	while (new_count < n)
+	{
+		buffer3[new_count] = buffer2[new_count];
+		new_count++;
+	}
+	return (buffer3);
 }
 
 int main()
@@ -35,6 +43,5 @@ int main()
 	char dest[] = "Geeks";
 	char source2[] = "Quiz";
 	char dest2[] = "Geeks";
-	ft_memcpy(dest, source, 5);
-	memcpy(dest2, source2, 5);
+	ft_memmove(dest, source, 5);
 }
