@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int count;
 
@@ -24,11 +24,11 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *buffer1;
-	char *buffer2;
-	size_t count;
+	char	*buffer1;
+	char	*buffer2;
+	size_t	count;
 
 	buffer1 = src;
 	buffer2 = dest;
@@ -41,7 +41,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *new_str;
 
@@ -52,12 +52,13 @@ char *ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	return (new_str);
 }
-
-int main()
-{
-	char first[] = "I hear you ";
-	char second[] = "call my name";
-
-	char *result;
-	result = ft_strjoin(first, second);
-}
+/*
+** int main()
+** {
+** 	char first[] = "I hear you ";
+** 	char second[] = "call my name";
+**
+** 	char *result;
+** 	result = ft_strjoin(first, second);
+** }
+*/
