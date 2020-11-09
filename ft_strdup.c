@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int			ft_strlen(char *str)
 {
 	int count;
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t count;
 
@@ -41,7 +41,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (count + 1);
 }
 
-char *ft_strdup(const char *src)
+char		*ft_strdup(const char *src)
 {
 	char *dest;
 
