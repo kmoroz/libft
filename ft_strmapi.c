@@ -12,12 +12,12 @@
 
 #include <stdlib.h>
 
-char sub_function(unsigned int number, char c)
+char	sub_function(unsigned int number, char c)
 {
 	return ('x');
 }
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int count;
 
@@ -29,11 +29,10 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *new_s;
-	unsigned int count;
+	char			*new_s;
+	unsigned int	count;
 
 	count = 0;
 	new_s = malloc(ft_strlen(s) + 1);
@@ -47,11 +46,12 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_s[count] = '\0';
 	return (new_s);
 }
-
-int main()
-{
-	char *result;
-	char test[] = "zhopa";
-
-	result = ft_strmapi(test, sub_function);
-}
+/*
+** int main()
+** {
+** 	char *result;
+** 	char test[] = "zhopa";
+**
+** 	result = ft_strmapi(test, sub_function);
+** }
+*/
