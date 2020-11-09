@@ -33,7 +33,7 @@ int	isnegative(char *str)
 		return (0);
 }
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int count;
 	int countminus;
@@ -47,7 +47,7 @@ int ft_atoi(const char *str)
 	while (str[count] == ' ' || str[count] == '\n' || str[count] == '\f'
 	|| str[count] == '\r' || str[count] == '\t' || str[count] == '\v'
 	|| str[count] == '-' || str[count] == '+')
-		count++; 
+		count++;
 	while (str[count] >= '0' && str[count] <= '9')
 	{
 		strtonum = 10 * strtonum + (str[count] - '0');
@@ -56,12 +56,4 @@ int ft_atoi(const char *str)
 	if (isnegativenum % 2 == 1)
 		return (strtonum * -1);
 	return (strtonum);
-}
-
-int main()
-{
-	int result;
-	char memes[] = " -2147483648";
-
-	result = ft_atoi(memes);
 }
