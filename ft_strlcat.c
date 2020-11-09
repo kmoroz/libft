@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int count;
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int dest_size;
 	int count;
@@ -40,13 +40,13 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dest_size + count] = '\0';
 	return (dest_size + ft_strlen(src));
 }
-
-int main()
-{
-	char first[] = "cheese";
-	char second[] = "town";
-
-	size_t result;
-	
-	result = ft_strlcat(first, second, 10);
-}
+/*
+** int main()
+** {
+** 	char first[] = "cheese";
+** 	char second[] = "town";
+**
+** 	size_t result;
+** 	result = ft_strlcat(first, second, 10);
+** }
+*/
