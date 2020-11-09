@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int count_int_length(int n)
+int		count_int_length(int n)
 {
-	int length;
+	int		length;
 
 	while (n != 0)
 	{
 		n = n / 10;
-		length ++;
+		length++;
 	}
 	return (length);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *num_to_str;
-	char digit;
-	int count;
-	int length;
+	char	*num_to_str;
+	char	digit;
+	int		count;
+	int		length;
 
 	count = 0;
 	length = count_int_length(n) - 1;
@@ -42,11 +42,4 @@ char *ft_itoa(int n)
 	}
 	num_to_str[count] = '\0';
 	return (num_to_str);
-}
-
-int main()
-{
-	char *result;
-
-	result = ft_itoa(15);
 }
