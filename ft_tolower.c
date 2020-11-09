@@ -10,17 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int arg)
+int	ft_tolower(int arg)
 {
 	if (arg >= 'A' && arg <= 'Z')
 		return (arg + 32);
 	return (arg);
 }
-
-int main()
-{
-	printf("%c", ft_tolower('y'));
-	printf("%c", ft_tolower(' '));
-	printf("%c", ft_tolower('U'));
-	printf("%c", ft_tolower('?'));
-}
+/*
+** int main()
+** {
+** 	printf("%c", ft_tolower('y'));
+** 	printf("%c", ft_tolower(' '));
+** 	printf("%c", ft_tolower('U'));
+** 	printf("%c", ft_tolower('?'));
+** }
+*/
