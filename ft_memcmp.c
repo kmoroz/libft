@@ -29,19 +29,13 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	char firt[] = "DWGaOtP12df0";
-// 	char second[] = "DWgAOTP12DF0";
-// 	printf("%d", ft_memcmp(firt, second, 13));
-// }
-
-int main()
-{
-	char s1[] = "atoms\0\0\0\0";  // extra null bytes at end
-	char s2[] = "atoms\0abc";     // embedded null byte
-	char s3[] = "atomsaaa";
-
-	int result = ft_memcmp(s1, s2, 8);
-}
+/*
+** int main()
+** {
+** 	char s1[] = "atoms\0\0\0\0";
+** 	char s2[] = "atoms\0abc";
+** 	char s3[] = "atomsaaa";
+**
+** 	int result = ft_memcmp(s1, s2, 8);
+** }
+*/
