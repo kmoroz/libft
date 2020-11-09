@@ -29,12 +29,13 @@ int	ft_strncmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-
-int main()
-{
-	char s1[] = "atoms\0\0\0\0";  // extra null bytes at end
-	char s2[] = "atoms\0abc";     // embedded null byte
-	char s3[] = "atomsaaa";
-
-	int result = ft_strncmp(s1, s2, 8);
-}
+/*
+** int main()
+** {
+** 	char s1[] = "atoms\0\0\0\0";
+** 	char s2[] = "atoms\0abc";
+** 	char s3[] = "atomsaaa";
+**
+** 	int result = ft_strncmp(s1, s2, 8);
+** }
+*/
