@@ -13,24 +13,24 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int	count_int_length(int n)
+int		count_int_length(int n)
 {
 	int length;
 
 	while (n != 0)
 	{
 		n = n / 10;
-		length ++;
+		length++;
 	}
 	return (length);
 }
 
 char	*ft_itoa(int n)
 {
-	char *num_to_str;
-	char digit;
-	int count;
-	int length;
+	char	*num_to_str;
+	char	digit;
+	int		count;
+	int		length;
 
 	count = 0;
 	length = count_int_length(n) - 1;
