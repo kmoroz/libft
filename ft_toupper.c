@@ -10,17 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int arg)
+int	ft_toupper(int arg)
 {
 	if (arg >= 'a' && arg <= 'z')
 		return (arg - 32);
 	return (arg);
 }
-
-int main()
-{
-	printf("%c", ft_toupper('Y'));
-	printf("%c", ft_toupper(' '));
-	printf("%c", ft_toupper('u'));
-	printf("%c", ft_toupper('?'));
-}
+/*
+** int main()
+** {
+** 	printf("%c", ft_toupper('Y'));
+** 	printf("%c", ft_toupper(' '));
+** 	printf("%c", ft_toupper('u'));
+** 	printf("%c", ft_toupper('?'));
+** }
+*/
