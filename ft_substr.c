@@ -12,10 +12,10 @@
 
 #include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	int count;
+	char	*substr;
+	int		count;
 
 	substr = malloc(len + 1);
 	count = 0;
@@ -30,11 +30,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	substr[count] = '\0';
 	return (substr);
 }
-
-int main()
-{
-	char big_string[] = "hello I am big";
-	char *result;
-
-	result = ft_substr(big_string, 7, 4);
-}
+/*
+** int main()
+** {
+** 	char big_string[] = "hello I am big";
+** 	char *result;
+**
+** 	result = ft_substr(big_string, 7, 4);
+** }
+*/
