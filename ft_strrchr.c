@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *str, int ch)
+char	*ft_strrchr(const char *str, int ch)
 {
-	int 	count;
-	char 	*last_pos;
+	int		count;
+	char	*last_pos;
 
 	count = 0;
 	while (str[count] != '\0')
@@ -23,11 +23,12 @@ char *ft_strrchr(const char *str, int ch)
 		count++;
 	}
 	return (last_pos);
-} 
-
-int main()
-{
-	char my_string[] = "poop";
-	char *test;
-	test = ft_strrchr(my_string, 'p');
 }
+/*
+** int main()
+** {
+** 	char my_string[] = "poop";
+** 	char *test;
+** 	test = ft_strrchr(my_string, 'p');
+** }
+*/
