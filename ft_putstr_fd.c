@@ -20,3 +20,10 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
+/*
+** int main()
+** {
+** 	char why[] = "ytho";
+** 	ft_putstr_fd(why, 1);
+** }
+*/
