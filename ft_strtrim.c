@@ -10,75 +10,73 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- int	ft_strlen(char *str)
- {
- 	int count;
-
- 	count = 0;
- 	while (str[count] != '\0')
- 	{
- 		count++;
- 	}
- 	return (count);
- }
-
-int ft_char_in_set(char const *set, char c)
+int		ft_strlen(char *str)
 {
-	while(*set)
+	int count;
+
+	count = 0;
+	while (str[count] != '\0')
 	{
-		if(c == *set)
-			return 1;
-		set++;	
+		count++;
 	}
-	return 0;
+	return (count);
 }
 
-int ft_get_length_of_left_trim(char const *str, char const *set)
+int		ft_char_in_set(char const *set, char c)
+{
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
+
+int		ft_get_length_of_left_trim(char const *str, char const *set)
 {
 	int length_of_string;
 	int count;
 
 	length_of_string = ft_strlen(str);
 	count = 0;
-	while(count < length_of_string)
+	while (count < length_of_string)
 	{
-		if(ft_char_in_set(set, str[count]) == 1)
+		if (ft_char_in_set(set, str[count]) == 1)
 			count++;
 		else
-			return count;
+			return (count);
 	}
 }
 
-int ft_get_length_of_right_trim(char const *str, char const *set)
+int		ft_get_length_of_right_trim(char const *str, char const *set)
 {
 	int length_of_string;
 	int count;
 
 	length_of_string = ft_strlen(str);
 	count = ft_strlen(str) - 1;
-	while(count >= 0)
+	while (count >= 0)
 	{
-		if(ft_char_in_set(set, str[count]) == 1)
+		if (ft_char_in_set(set, str[count]) == 1)
 			count--;
 		else
 			return (length_of_string - (count + 1));
 	}
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trimmed_str;
-	int left_trim;
-	int right_trim;
-	int trimmable_area;
-	int starting_index;
-	int finishing_index;
-	int count;
-	
+	char	*trimmed_str;
+	int		left_trim;
+	int		right_trim;
+	int		starting_index;
+	int		finishing_index;
+	int		count;
+
 	left_trim = ft_get_length_of_left_trim(s1, set);
 	right_trim = ft_get_length_of_right_trim(s1, set);
-	trimmable_area = left_trim + right_trim;
-	trimmed_str = malloc((ft_strlen(s1) - trimmable_area) + 1);
+	trimmed_str = malloc((ft_strlen(s1) - (left_trim + right_trim)) + 1);
 	count = 0;
 	starting_index = left_trim;
 	finishing_index = ft_strlen(s1) - right_trim;
@@ -91,12 +89,13 @@ char *ft_strtrim(char const *s1, char const *set)
 	trimmed_str[count] = '\0';
 	return (trimmed_str);
 }
-
-int main()
-{
-	char * set = "atu";
-	char *c = "aaataubenttt";
-	char *result;
-
-	result = ft_strtrim(c, set);
-}
+/*
+** int main()
+** {
+** 	char * set = "atu";
+** 	char *c = "aaataubenttt";
+** 	char *result;
+**
+** 	result = ft_strtrim(c, set);
+** }
+*/
