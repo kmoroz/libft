@@ -12,8 +12,8 @@
 
 char	*ft_strchr(const char *str, int ch)
 {
-	int 	count;
-	char 	*modifiable_str;
+	int		count;
+	char	*modifiable_str;
 
 	count = 0;
 	modifiable_str = str;
@@ -25,9 +25,10 @@ char	*ft_strchr(const char *str, int ch)
 	}
 	return ('\0');
 }
-
-int main()
-{
-	char my_thoughts[] = "help";
-	printf("%s", ft_strchr(my_thoughts, 'l'));
-}
+/*
+** int main()
+** {
+** 	char my_thoughts[] = "help";
+** 	printf("%s", ft_strchr(my_thoughts, 'l'));
+** }
+*/
