@@ -15,29 +15,28 @@
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	char	*result;
-	size_t	count_s1;
-	size_t	count_s2;
+	size_t	count_array[2];
 
-	count_s1 = 0;
-	count_s2 = 0;
-	while (count_s1 < n && result == NULL)
+	count_array[0] = 0;
+	count_array[1] = 0;
+	while (count_array[0] < n && result == NULL)
 	{
-		if (s1[count_s1] == s2[count_s2])
+		if (s1[count_array[0]] == s2[count_array[1]])
 		{
-			result = s1 + count_s1;
-			while (s2[count_s2] != '\0' && count_s1 < n)
+			result = s1 + count_array[0];
+			while (s2[count_array[1]] != '\0' && count_array[0] < n)
 			{
-				if (s1[count_s1] != s2[count_s2])
+				if (s1[count_array[0]] != s2[count_array[1]])
 				{
-					count_s2 = 0;
+					count_array[1] = 0;
 					result = NULL;
 					break ;
 				}
-				count_s1++;
-				count_s2++;
+				count_array[0]++;
+				count_array[1]++;
 			}
 		}
-		count_s1++;
+		count_array[0]++;
 	}
 	return (result);
 }
