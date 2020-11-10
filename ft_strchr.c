@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *str, int ch)
 {
 	int		count;
@@ -29,6 +31,6 @@ char	*ft_strchr(const char *str, int ch)
 ** int main()
 ** {
 ** 	char my_thoughts[] = "help";
-** 	printf("%s", ft_strchr(my_thoughts, 'l'));
+** 	printf("%s", ft_strchr(my_thoughts, 'e'));
 ** }
 */

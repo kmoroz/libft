@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		count_int_length(int n)
+#include "libft.h"
+
+static int	count_int_length(int n)
 {
 	int		length;
 
@@ -22,7 +24,7 @@ int		count_int_length(int n)
 	return (length);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*num_to_str;
 	char	digit;

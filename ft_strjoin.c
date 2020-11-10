@@ -10,36 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	char	*buffer1;
-	char	*buffer2;
-	size_t	count;
-
-	buffer1 = src;
-	buffer2 = dest;
-	count = 0;
-	while (count < n)
-	{
-		buffer2[count] = buffer1[count];
-		count++;
-	}
-	return (dest);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -57,7 +28,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 ** {
 ** 	char first[] = "I hear you ";
 ** 	char second[] = "call my name";
-**
 ** 	char *result;
 ** 	result = ft_strjoin(first, second);
 ** }

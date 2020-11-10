@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int argument)
 {
 	if ((argument >= 'a' && argument <= 'z')

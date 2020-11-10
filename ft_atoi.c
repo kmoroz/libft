@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isnegative(char *str)
+#include "libft.h"
+
+static int	is_negative(char *str)
 {
 	int count;
 	int countminus;
@@ -33,14 +35,14 @@ int	isnegative(char *str)
 		return (0);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int count;
 	int countminus;
 	int strtonum;
 	int isnegativenum;
 
-	isnegativenum = isnegative(str);
+	isnegativenum = is_negative(str);
 	count = 0;
 	countminus = 0;
 	strtonum = 0;

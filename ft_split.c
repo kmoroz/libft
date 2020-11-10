@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int		get_word_count(char *str, char delimiter)
+static int	get_word_count(char *str, char delimiter)
 {
 	int count;
 
@@ -26,7 +26,7 @@ int		get_word_count(char *str, char delimiter)
 	return (count);
 }
 
-char	*copy_string(char const *str, int len)
+static char	*copy_string(char const *str, int len)
 {
 	char	*new_string;
 	int		count;
@@ -42,7 +42,7 @@ char	*copy_string(char const *str, int len)
 	return (new_string);
 }
 
-char	**ft_split(char const *str, char dlm)
+char		**ft_split(char const *str, char dlm)
 {
 	int		word_count;
 	int		count;

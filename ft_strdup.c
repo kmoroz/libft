@@ -10,38 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int			ft_strlen(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-size_t		ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t count;
-
-	count = 0;
-	if (size == 0)
-		return (0);
-	while (src[count] != '\0')
-	{
-		if (count < (size - 1))
-			dest[count] = src[count];
-		count++;
-	}
-	dest[count] = '\0';
-	return (count + 1);
-}
-
-char		*ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
 	char *dest;
 
@@ -51,3 +22,10 @@ char		*ft_strdup(const char *src)
 	ft_strlcpy(dest, src, ft_strlen(src) + 1);
 	return (dest);
 }
+/*
+** int main()
+** {
+** 	char source[] = "souce";
+** 	printf("%s", source);
+** }
+*/

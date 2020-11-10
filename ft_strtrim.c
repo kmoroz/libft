@@ -10,19 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int count;
+#include "libft.h"
 
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-int		ft_char_in_set(char const *set, char c)
+static int		ft_char_in_set(char const *set, char c)
 {
 	while (*set)
 	{
@@ -33,7 +23,7 @@ int		ft_char_in_set(char const *set, char c)
 	return (0);
 }
 
-int		ft_get_length_of_left_trim(char const *str, char const *set)
+static int		ft_get_length_of_left_trim(char const *str, char const *set)
 {
 	int length_of_string;
 	int count;
@@ -49,7 +39,7 @@ int		ft_get_length_of_left_trim(char const *str, char const *set)
 	}
 }
 
-int		ft_get_length_of_right_trim(char const *str, char const *set)
+static int		ft_get_length_of_right_trim(char const *str, char const *set)
 {
 	int length_of_string;
 	int count;
@@ -95,7 +85,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 ** 	char * set = "atu";
 ** 	char *c = "aaataubenttt";
 ** 	char *result;
-**
-** 	result = ft_strtrim(c, set);
+** 	result = ft_strtrim(c, set);	printf("%c", 'd');
 ** }
 */
