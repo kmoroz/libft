@@ -55,13 +55,12 @@ static int		ft_get_length_of_right_trim(char const *str, char const *set)
 	}
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed_str;
 	int		left_trim;
 	int		right_trim;
 	int		starting_index;
-	int		finishing_index;
 	int		count;
 
 	left_trim = ft_get_length_of_left_trim(s1, set);
@@ -69,8 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed_str = malloc((ft_strlen(s1) - (left_trim + right_trim)) + 1);
 	count = 0;
 	starting_index = left_trim;
-	finishing_index = ft_strlen(s1) - right_trim;
-	while (s1[starting_index] != s1[finishing_index])
+	while (s1[starting_index] != s1[ft_strlen(s1) - right_trim])
 	{
 		trimmed_str[count] = s1[starting_index];
 		count++;
@@ -85,6 +83,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 ** 	char * set = "atu";
 ** 	char *c = "aaataubenttt";
 ** 	char *result;
-** 	result = ft_strtrim(c, set);	printf("%c", 'd');
+** 	result = ft_strtrim(c, set);
+** 	printf("%s", result);
 ** }
 */
