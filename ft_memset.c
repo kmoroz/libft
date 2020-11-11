@@ -19,19 +19,17 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	count = 0;
 	buffer = str;
-	while (buffer[count] != '\0' && n != 0)
+	while (count < n)
 	{
 		buffer[count] = c;
 		count++;
-		n--;
 	}
+	return (buffer);
 }
 /*
 ** int main()
 ** {
-** 	char my_thoughts[] = "help";
-** 	char my_thoughts2[] = "help2";
-** 	ft_memset(my_thoughts, '?', 6);
-** 	memset(my_thoughts2, '?', 6);
+** 	ft_memset("", 'A', 0);
+** 	memset("", 'A', (0));
 ** }
 */
