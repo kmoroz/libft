@@ -14,34 +14,33 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*buffer1;
-	char	*buffer2;
-	size_t	count;
+	unsigned char	*buffer1;
+	unsigned char	*buffer2;
+	size_t			count;
 
-	buffer1 = src;
-	buffer2 = dest;
+	buffer1 = (unsigned char*)src;
+	buffer2 = (unsigned char*)dest;
 	count = 0;
-	while (n != 0)
+	while (count < n)
 	{
-		if (buffer1[count] == c)
+		if (buffer1[count] == (unsigned char)c)
 		{
 			buffer2[count] = buffer1[count];
 			return (buffer2 + count + 1);
 		}
 		buffer2[count] = buffer1[count];
 		count++;
-		n--;
 	}
 	return (NULL);
 }
 /*
 ** int main()
 ** {
-** 	char source[] = "Quiz";
-** 	char dest[] = "Geeks";
-** 	char source2[] = "Quiz";
-** 	char dest2[] = "Geeks";
-** 	printf("%d", ft_memccpy(dest, source, 'i', 5));
-** 	printf("%d", memccpy(dest2, source2, 'i', 5));
+** 	char source[] = "string with\200inside !";
+** 	char dest[] = "abcdefghijklmnopqrstuvwxyz";
+** 	char source2[] = "string with\200inside !";
+** 	char dest2[] = "abcdefghijklmnopqrstuvwxyz";
+** 	printf("%d", ft_memccpy(dest, source, 0600, 21));
+** 	printf("%d", memccpy(dest2, source2, 0600, 21));
 ** }
 */
