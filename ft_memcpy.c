@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	buffer1 = src;
 	buffer2 = dest;
 	count = 0;
+	if (src == NULL && dest == NULL)
+		return (NULL);
 	while (count < n)
 	{
 		buffer2[count] = buffer1[count];
@@ -31,7 +33,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 ** int main()
 ** {
-** 	char source[] = "Quiz";
+** 	char source[] = '"Quiz"';
 ** 	char dest[] = "Geeks";
 ** 	char source2[] = "Quiz";
 ** 	char dest2[] = "Geeks";
