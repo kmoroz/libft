@@ -20,3 +20,13 @@ int	ft_isalnum(int argument)
 		return (1);
 	return (0);
 }
+/*
+** int main()
+** {
+** 	int result;
+** 	int result2;
+**
+** 	result = ft_isalnum(0);
+** 	result2 = isalnum(0);
+** }
+*/

@@ -32,7 +32,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 ** {
 ** 	char my_thoughts[] = "help";
 ** 	char *test;
-**
 ** 	test = ft_memchr(my_thoughts, 'z', 4);
 ** }
 */
