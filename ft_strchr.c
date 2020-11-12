@@ -14,18 +14,16 @@
 
 char	*ft_strchr(const char *str, int ch)
 {
-	int		count;
-	char	*modifiable_str;
+	unsigned char	*modifiable_str;
 
-	count = 0;
-	modifiable_str = str;
-	while (*modifiable_str != '\0')
+	modifiable_str = (unsigned char *)str;
+	while (*modifiable_str != ch)
 	{
-		if (*modifiable_str == ch)
-			return (modifiable_str);
+		if (*modifiable_str == '\0')
+			return (NULL);
 		modifiable_str++;
 	}
-	return ('\0');
+	return (modifiable_str);
 }
 /*
 ** int main()
