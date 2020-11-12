@@ -18,21 +18,21 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	count = 0;
 	if (size == 0)
-		return (0);
-	while (src[count] != '\0')
+		return (ft_strlen(src));
+	while (src[count] != '\0' && count < (size - 1))
 	{
-		if (count < (size - 1))
-			dest[count] = src[count];
+		dest[count] = src[count];
 		count++;
 	}
 	dest[count] = '\0';
-	return (count + 1);
+	return (ft_strlen(src));
 }
 /*
 ** int main()
 ** {
-**     char dest[] = "wtf";
-**     char src[] = "Jessica";
-**     printf("%d", ft_strlcpy(dest, src, 4));
+**     char dest[] = "";
+**     char src[] = "hello !";
+** 	int result;
+**     result = ft_strlcpy(dest, src, 18);
 ** }
 */
