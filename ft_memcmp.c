@@ -15,12 +15,12 @@
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
 	size_t	count;
-	char	*buffer1;
-	char	*buffer2;
+	unsigned char	*buffer1;
+	unsigned char	*buffer2;
 
 	count = 0;
-	buffer1 = ptr1;
-	buffer2 = ptr2;
+	buffer1 = (unsigned char*)ptr1;
+	buffer2 = (unsigned char*)ptr2;
 	while (count != num)
 	{
 		if (buffer1[count] != buffer2[count])
