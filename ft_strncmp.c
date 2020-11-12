@@ -14,14 +14,14 @@
 
 int	ft_strncmp(const void *ptr1, const void *ptr2, size_t num)
 {
-	size_t	count;
-	char	*buffer1;
-	char	*buffer2;
+	size_t			count;
+	unsigned char	*buffer1;
+	unsigned char	*buffer2;
 
 	count = 0;
-	buffer1 = ptr1;
-	buffer2 = ptr2;
-	while (count != num && buffer1[count] != '\0' && buffer2[count] != '\0')
+	buffer1 = (unsigned char*)ptr1;
+	buffer2 = (unsigned char*)ptr2;
+	while (count != num && (buffer1[count] != '\0' || buffer2[count] != '\0'))
 	{
 		if (buffer1[count] != buffer2[count])
 			return (buffer1[count] - buffer2[count]);
