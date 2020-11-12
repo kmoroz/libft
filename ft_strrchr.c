@@ -14,14 +14,18 @@
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	int		count;
-	char	*last_pos;
+	int				count;
+	unsigned char	*last_pos;
 
 	count = 0;
-	while (str[count] != '\0')
+	if (ft_strlen(str) == 0)
+		return (NULL);
+	while (count < ft_strlen(str))
 	{
-		if (str[count] == ch)
-			last_pos = str + count;
+		if ((unsigned char)ch == '\0')
+			return (str + ft_strlen(str));
+		if (str[count] == (unsigned char)ch)
+			last_pos = (unsigned char*)str + count;
 		count++;
 	}
 	return (last_pos);
