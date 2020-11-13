@@ -24,6 +24,8 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	count = 0;
 	new_s = malloc(ft_strlen(s) + 1);
+	if (new_s == NULL)
+		return (NULL);
 	while (s[count] != '\0')
 	{
 		new_s[count] = (*f)(count, s[count]);
