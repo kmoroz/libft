@@ -18,6 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		count;
 
 	substr = malloc(len + 1);
+	if (substr == NULL)
+		return (NULL);
+	if (ft_strlen(s) <= start)
+		return (substr);
 	count = 0;
 	while (s[start] != '\0' && count < len)
 	{
@@ -25,17 +29,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		count++;
 		start++;
 	}
-	if (substr == NULL)
-		return (NULL);
 	substr[count] = '\0';
 	return (substr);
 }
 /*
 ** int main()
 ** {
-** 	char big_string[] = "hello I am big";
+** 	char big_string[] = "01234";
 ** 	char *result;
-**
-** 	result = ft_substr(big_string, 7, 4);
+** 	result = ft_substr(big_string, 7, 10);
 ** }
 */
