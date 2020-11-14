@@ -14,35 +14,29 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*buffer1;
-	char	buffer2[n];
-	char	*buffer3;
-	size_t	count;
-	size_t	new_count;
+	unsigned char	*source;
+	unsigned char	*destination;
+	int				count;
 
-	buffer1 = src;
-	buffer3 = dest;
-	count = 0;
-	new_count = 0;
-	while (count < n)
+	if (src == dest)
+		return (dest);
+	source = (unsigned char*)src;
+	destination = (unsigned char*)dest;
+	count = n - 1;
+	if (source < destination)
 	{
-		buffer2[count] = buffer1[count];
-		count++;
+		while (count >= 0)
+		{
+			destination[count] = source[count];
+			count--;
+		}
 	}
-	while (new_count < n)
+	while (count >= 0)
 	{
-		buffer3[new_count] = buffer2[new_count];
-		new_count++;
+		*destination = *source;
+		count--;
+		source++;
+		destination++;
 	}
-	return (buffer3);
+	return (dest);
 }
-/*
-** int main()
-** {
-** 	char source[] = "Quiz";
-** 	char dest[] = "Geeks";
-** 	char source2[] = "Quiz";
-** 	char dest2[] = "Geeks";
-** 	ft_memmove(dest, source, 5);
-** }
-*/
