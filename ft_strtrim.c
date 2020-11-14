@@ -35,8 +35,9 @@ static int		ft_get_length_of_left_trim(char const *str, char const *set)
 		if (ft_char_in_set(set, str[count]) == 1)
 			count++;
 		else
-			return (count);
+			break ;
 	}
+	return (count);
 }
 
 static int		ft_get_length_of_right_trim(char const *str, char const *set)
@@ -45,14 +46,30 @@ static int		ft_get_length_of_right_trim(char const *str, char const *set)
 	int count;
 
 	length_of_string = ft_strlen(str);
-	count = ft_strlen(str) - 1;
+	count = 0;
 	while (count >= 0)
 	{
-		if (ft_char_in_set(set, str[count]) == 1)
-			count--;
+		if (ft_char_in_set(set, str[length_of_string - 1]) == 1)
+		{
+			count++;
+			length_of_string--;
+		}
 		else
-			return (length_of_string - (count + 1));
+			break ;
 	}
+	return (count);
+}
+
+static void		copy(char *starting_address,
+char *dest, char *finishing_address)
+{
+	while (starting_address != finishing_address)
+	{
+		*dest = *starting_address;
+		starting_address++;
+		dest++;
+	}
+	*dest = '\0';
 }
 
 char			*ft_strtrim(char const *s1, char const *set)
@@ -60,30 +77,20 @@ char			*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed_str;
 	int		left_trim;
 	int		right_trim;
-	int		starting_index;
+	int		finishing_index;
 	int		count;
 
 	left_trim = ft_get_length_of_left_trim(s1, set);
 	right_trim = ft_get_length_of_right_trim(s1, set);
-	trimmed_str = malloc((ft_strlen(s1) - (left_trim + right_trim)) + 1);
-	count = 0;
-	starting_index = left_trim;
-	while (s1[starting_index] != s1[ft_strlen(s1) - right_trim])
+	if (left_trim == ft_strlen(s1))
 	{
-		trimmed_str[count] = s1[starting_index];
-		count++;
-		starting_index++;
+		trimmed_str = (char*)malloc(1);
+		trimmed_str[0] = '\0';
+		return (trimmed_str);
 	}
-	trimmed_str[count] = '\0';
+	trimmed_str = (char*)malloc(ft_strlen(s1) - (left_trim + right_trim) + 1);
+	if (trimmed_str == NULL)
+		return (NULL);
+	copy(s1 + left_trim, trimmed_str, s1 + (ft_strlen(s1) - right_trim));
 	return (trimmed_str);
 }
-/*
-** int main()
-** {
-** 	char * set = "atu";
-** 	char *c = "aaataubenttt";
-** 	char *result;
-** 	result = ft_strtrim(c, set);
-** 	printf("%s", result);
-** }
-*/
