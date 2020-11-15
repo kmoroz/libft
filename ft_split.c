@@ -16,16 +16,17 @@ static int	get_word_count(char *str, char delimiter)
 {
 	int count;
 
-	count = -1;
+	count = 1;
+	if (ft_strlen == 0)
+		return (0);
 	while (*str != '\0')
 	{
 		if (*str == delimiter)
 		{
 			count++;
-			while(*str == delimiter)
+			while (*str == delimiter)
 				str++;
 		}
-		
 		str++;
 	}
 	return (count);
@@ -38,6 +39,8 @@ static char	*copy_string(char const *str, int len)
 
 	count = 0;
 	new_string = (char *)malloc(len + 1);
+	if (new_string == NULL)
+		return (NULL);
 	while (count < len)
 	{
 		new_string[count] = str[count];
@@ -47,34 +50,43 @@ static char	*copy_string(char const *str, int len)
 	return (new_string);
 }
 
+static int	number_of_delimeters_to_skip(char *trimed_str, char dlm)
+{
+	int count;
+
+	count = 0;
+	while (*trimed_str == dlm)
+	{
+		count++;
+		trimed_str++;
+	}
+	return (count);
+}
+
 char		**ft_split(char const *str, char dlm)
 {
 	int		word_count;
 	int		count;
 	char	**final_array;
-	char	*current_position;
-	int		len;
-	char	*strimed_str;
+	char	*start;
+	char	*trimed_str;
 
-	word_count = get_word_count((char*)str, dlm);
+	trimed_str = ft_strtrim(str, &dlm);
+	if (trimed_str == NULL)
+		return (NULL);
+	word_count = get_word_count((char*)trimed_str, dlm);
 	count = 0;
 	final_array = malloc((word_count + 1) * sizeof(char*));
-
-	while (*str == dlm)
-		str++;
-
+	if (final_array == NULL)
+		return (NULL);
 	while (count < word_count)
 	{
-		current_position = str;
-		while (*str != dlm && *str)
-			str++;
-
-		len = str - current_position;
-		final_array[count] = copy_string(current_position, len);
+		start = trimed_str;
+		while (*trimed_str != dlm && *trimed_str)
+			trimed_str++;
+		final_array[count] = copy_string(start, trimed_str - start);
 		count++;
-
-		while (*str == dlm)
-			str++;
+		trimed_str = trimed_str + number_of_delimeters_to_skip(trimed_str, dlm);
 	}
 	final_array[count] = 0;
 	return (final_array);
@@ -83,7 +95,7 @@ char		**ft_split(char const *str, char dlm)
 ** int main()
 ** {
 ** 	char **result;
-** 	char str[] = "                  olol";
+** 	char str[] = "      split       this for   me  !       ";
 ** 	char c = ' ';
 ** 	result = ft_split(str, c);
 ** }

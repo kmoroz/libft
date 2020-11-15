@@ -85,6 +85,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	if (left_trim == ft_strlen(s1))
 	{
 		trimmed_str = (char*)malloc(1);
+		if (trimmed_str == NULL)
+			return (NULL);
 		trimmed_str[0] = '\0';
 		return (trimmed_str);
 	}
