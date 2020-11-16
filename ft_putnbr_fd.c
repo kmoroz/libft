@@ -14,21 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
-	{
-		n = n * -1;
-		ft_putchar_fd('-', fd);
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
-	ft_putchar_fd(n + '0', fd);
+	ft_putstr_fd(ft_itoa(n), fd);
 }
 /*
 ** int main()
 ** {
-** 	ft_putnbr_fd(81, 1);
+** 	ft_putnbr_fd(-5675, 1);
 ** }
 */
