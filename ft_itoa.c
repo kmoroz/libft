@@ -69,7 +69,7 @@ static char		*copy(int n)
 		return (NULL);
 	if (n < 0)
 		n = n * -1;
-	length = length += is_negative_number;
+	length += is_negative_number;
 	while (length > (0 - is_negative_number))
 	{
 		n = copy_digit(n, length, dest);
@@ -86,9 +86,10 @@ char			*ft_itoa(int n)
 {
 	char	*num_to_str;
 
+	num_to_str = (char *)malloc(12 * sizeof(char));
 	if (n == -2147483648)
 	{
-		if (!(num_to_str = (char *)malloc(12 * sizeof(char))))
+		if (num_to_str == NULL)
 			return (NULL);
 		return (copy_minint(num_to_str, "-2147483648", 12));
 	}
