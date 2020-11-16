@@ -14,14 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *n_to_str;
-
-	n_to_str = ft_itoa(n);
-	while (*n_to_str != '\0')
+	if (n < 0)
 	{
-		write(fd, n_to_str, 1);
-		n_to_str++;
+		n = n * -1;
+		ft_putchar_fd('-', fd);
 	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
+	ft_putchar_fd(n + '0', fd);
 }
 /*
 ** int main()
