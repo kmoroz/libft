@@ -23,7 +23,7 @@ char	*ft_strchr(const char *str, int ch)
 			return (NULL);
 		modifiable_str++;
 	}
-	return (modifiable_str);
+	return ((char*)modifiable_str);
 }
 /*
 ** int main()
