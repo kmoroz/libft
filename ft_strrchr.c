@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *str, int ch)
 			last_pos = (unsigned char*)str + count;
 		count++;
 	}
-	return (last_pos);
+	return ((char*)last_pos);
 }
 /*
 ** int main()

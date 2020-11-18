@@ -17,7 +17,7 @@ static int	get_word_count(char *str, char delimiter)
 	int count;
 
 	count = 1;
-	if (ft_strlen == 0)
+	if (ft_strlen(str) == 0)
 		return (0);
 	while (*str != '\0')
 	{
