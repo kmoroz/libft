@@ -18,12 +18,12 @@ char	*ft_strrchr(const char *str, int ch)
 	unsigned char	*last_pos;
 
 	count = 0;
-	if (ft_strlen(str) == 0)
+	if (ft_strlen((char*)str) == 0)
 		return (NULL);
-	while (count < ft_strlen(str))
+	while (count < ft_strlen((char*)str))
 	{
 		if ((unsigned char)ch == '\0')
-			return (str + ft_strlen(str));
+			return ((char*)str + ft_strlen((char*)str));
 		if (str[count] == (unsigned char)ch)
 			last_pos = (unsigned char*)str + count;
 		count++;

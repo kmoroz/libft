@@ -16,10 +16,10 @@ char	*ft_strdup(const char *src)
 {
 	char *dest;
 
-	dest = malloc(ft_strlen(src) + 1);
+	dest = (char*)malloc(ft_strlen((char*)src) + 1);
 	if (dest == NULL)
 		return (NULL);
-	ft_strlcpy(dest, src, ft_strlen(src) + 1);
+	ft_strlcpy(dest, src, ft_strlen((char*)src) + 1);
 	return (dest);
 }
 /*

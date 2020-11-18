@@ -16,11 +16,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *new_str;
 
-	new_str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	new_str = (char*)malloc(ft_strlen((char*)s1) + ft_strlen((char*)s2) + 1);
 	if (new_str == NULL)
 		return (NULL);
-	ft_memcpy(new_str, s1, ft_strlen(s1));
-	ft_memcpy(new_str + ft_strlen(s1), s2, ft_strlen(s2) + 1);
+	ft_memcpy(new_str, s1, ft_strlen((char*)s1));
+	ft_memcpy(new_str + ft_strlen((char*)s1), s2, ft_strlen((char*)s2) + 1);
 	return (new_str);
 }
 /*

@@ -29,7 +29,7 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 	count_s2 = 0;
 	result = NULL;
 	if (is_empty(s2) == 1)
-		return (s1);
+		return ((char*)s1);
 	while (count_s1 < n && result == NULL)
 	{
 		if (s1[count_s1] == s2[count_s2])

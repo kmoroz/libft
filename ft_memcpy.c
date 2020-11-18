@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*buffer2;
 	size_t	count;
 
-	buffer1 = src;
+	buffer1 = (char*)src;
 	buffer2 = dest;
 	count = 0;
 	if (src == NULL && dest == NULL)
