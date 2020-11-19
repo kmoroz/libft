@@ -56,7 +56,6 @@ static int		copy_digit(int n, int length, char *dest)
 static char		*copy(int n)
 {
 	char	*dest;
-	char	digit;
 	int		count;
 	int		length;
 	int		is_negative_number;

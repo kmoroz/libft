@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRCS = ft_isalpha.c ft_memccpy.c  \
+SRCS = ft_isalpha.c ft_memccpy.c \
 ft_memset.c ft_split.c \
 ft_strlcpy.c ft_strrchr.c \
 ft_atoi.c ft_isascii.c \
@@ -30,17 +30,21 @@ ft_putstr_fd.c ft_strlcat.c \
 ft_strnstr.c ft_toupper.c
 FLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
+CC = cc
 
 all: $(NAME)
-
-so:
-	gcc -shared -o libft.so -fPIC $(OBJS)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+$(OBJS): $(SRCS)
+	$(CC) $(FLAGS) -c $(SRCS)
+
+so:
+	$(CC) -shared -o libft.so -fPIC $(OBJS)
+
 clean:
-	rm -f *.o
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)

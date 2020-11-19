@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-static char	sub_function(unsigned int number, char c)
-{
-	return ('x');
-}
-
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new_s;

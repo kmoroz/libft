@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#define FT_LIBFT_H
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nitems, size_t size);

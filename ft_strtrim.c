@@ -77,8 +77,6 @@ char			*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed_str;
 	int		left_trim;
 	int		right_trim;
-	int		finishing_index;
-	int		count;
 
 	left_trim = ft_get_length_of_left_trim(s1, set);
 	right_trim = ft_get_length_of_right_trim(s1, set);

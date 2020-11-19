@@ -14,13 +14,13 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	int		count;
+	char			*substr;
+	unsigned int	count;
 
 	substr = (char*)malloc(len + 1);
 	if (substr == NULL)
 		return (NULL);
-	if (ft_strlen((char*)s) <= start)
+	if ((unsigned int)ft_strlen((char*)s) <= start)
 		return (substr);
 	count = 0;
 	while (s[start] != '\0' && count < len)
