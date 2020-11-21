@@ -34,12 +34,10 @@ CC = cc
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-$(OBJS): $(SRCS)
+$(NAME): $(SRCS)
 	$(CC) $(FLAGS) -c $(SRCS)
-
+	ar rcs $(NAME) $(OBJS)
+	
 so:
 	$(CC) -shared -o libft.so -fPIC $(OBJS)
 
