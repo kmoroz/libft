@@ -74,7 +74,8 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 		start = trimed_str;
 		while (*trimed_str != dlm && *trimed_str)
 			trimed_str++;
-		if (!(final_array[count] = (char*)malloc(trimed_str - start + 1)))
+		final_array[count] = (char*)malloc(trimed_str - start + 1);
+		if (!(final_array[count]))
 			return (free_all(final_array));
 		ft_strlcpy(final_array[count], start, trimed_str - start + 1);
 		count++;
