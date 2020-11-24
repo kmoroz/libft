@@ -14,27 +14,23 @@
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	int				count;
-	unsigned char	*last_pos;
+	int		count;
+	int		len;
+	char	*last_pos;
 
 	count = 0;
-	if (ft_strlen((char*)str) == 0)
+	len = ft_strlen((char*)str);
+	if (len == 0)
 		return (NULL);
-	while (count < ft_strlen((char*)str))
+	while (len >= 0)
 	{
-		if ((unsigned char)ch == '\0')
-			return ((char*)str + ft_strlen((char*)str));
-		if (str[count] == (unsigned char)ch)
-			last_pos = (unsigned char*)str + count;
+		if (str[len] == (unsigned char)ch)
+		{
+			last_pos = (char*)&str[len];
+			return ((char*)last_pos);
+		}
 		count++;
+		len--;
 	}
-	return ((char*)last_pos);
+	return (NULL);
 }
-/*
-** int main()
-** {
-** 	char my_string[] = "poop";
-** 	char *test;
-** 	test = ft_strrchr(my_string, 'p');
-** }
-*/
