@@ -28,8 +28,11 @@ ft_tolower.c ft_isalnum.c \
 ft_itoa.c ft_memmove.c \
 ft_putstr_fd.c ft_strlcat.c \
 ft_strnstr.c ft_toupper.c
+BSRCS = ft_lstnew.c ft_lstadd_front.c \
+ft_lstsize.c
 FLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
+BOBJS = $(BSRCS:.c=.o)
 CC = cc
 
 all: $(NAME)
@@ -39,12 +42,16 @@ $(NAME): $(SRCS)
 	ar rcs $(NAME) $(OBJS)
 	
 so:
-	$(CC) -shared -o libft.so -fPIC $(OBJS)
+	$(CC) -shared -o libft.so -fPIC $(OBJS) $(BOBJS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -f $(NAME)
+
+bonus: $(BSRCS)
+	$(CC) $(FLAGS) -c $(BSRCS)
+	ar rcs $(NAME) $(BOBJS)
 
 re: fclean all
