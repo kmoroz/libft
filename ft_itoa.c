@@ -85,9 +85,9 @@ char			*ft_itoa(int n)
 {
 	char	*num_to_str;
 
-	num_to_str = (char *)malloc(12 * sizeof(char));
 	if (n == -2147483648)
 	{
+		num_to_str = (char *)malloc(12 * sizeof(char));
 		if (num_to_str == NULL)
 			return (NULL);
 		return (copy_minint(num_to_str, "-2147483648", 12));
@@ -99,8 +99,8 @@ char			*ft_itoa(int n)
 ** {
 ** 	char *result1; char *result2; char *result3;char *result4;
 ** 	result1 = ft_itoa(-2147483648);
-** 	result2 = ft_itoa(156);
-** 	result3 = ft_itoa(-1234);
-** 	result4 = ft_itoa(-623);
+** 	//result2 = ft_itoa(156);
+** 	// result3 = ft_itoa(-1234);
+** 	// result4 = ft_itoa(-623);
 ** }
 */
