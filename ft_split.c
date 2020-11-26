@@ -66,7 +66,7 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 	char	*start;
 
 	count = 0;
-	final_array = malloc((word_count + 1) * sizeof(char*));
+	final_array = (char**)malloc((word_count + 1) * sizeof(char *));
 	if (final_array == NULL)
 		return (NULL);
 	while (count < word_count)
@@ -76,7 +76,7 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 			trimed_str++;
 		final_array[count] = (char*)malloc(trimed_str - start + 1);
 		if (!(final_array[count]))
-			return (free_all(final_array));
+			free_all(final_array);
 		ft_strlcpy(final_array[count], start, trimed_str - start + 1);
 		count++;
 		trimed_str = trimed_str + number_of_delimeters_to_skip(trimed_str, dlm);
@@ -89,19 +89,21 @@ char		**ft_split(char const *str, char dlm)
 {
 	int		word_count;
 	char	*trimed_str;
+	char	**result;
 
 	trimed_str = ft_strtrim(str, &dlm);
 	if (trimed_str == NULL)
 		return (NULL);
 	word_count = get_word_count((char*)trimed_str, dlm);
-	return (split(trimed_str, dlm, word_count));
+	result = split(trimed_str, dlm, word_count);
+	free(trimed_str);
+	return (result);
 }
 /*
 ** int main()
 ** {
-** 	char **result;
-** 	char str[] = "      split       this for   me  !       ";
+** 	char str[] = "split       this for   me  !";
 ** 	char c = ' ';
-** 	result = ft_split(str, c);
+** 	ft_split(str, c);
 ** }
 */
