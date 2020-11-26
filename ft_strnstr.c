@@ -54,14 +54,7 @@ char			*ft_strnstr(const char *s1, const char *s2, size_t n)
 		return ((char*)s1);
 	if (ft_strlen((char*)s1) < ft_strlen((char*)s2))
 		return (NULL);
+	if (ft_strlen((char*)s1) < n)
+		return (find_substring(s1, s2, ft_strlen((char*)s1)));
 	return (find_substring(s1, s2, n));
 }
-/*
-** int main()
-** {
-** 	char string[] = "abcdef";
-** 	char substring[] = "abcdefghijklmnop";
-** 	char *result;
-** 	result = ft_strnstr(string, substring, 7);
-** }
-*/

@@ -25,8 +25,8 @@ static int		ft_char_in_set(char const *set, char c)
 
 static int		ft_get_length_of_left_trim(char const *str, char const *set)
 {
-	int length_of_string;
-	int count;
+	size_t length_of_string;
+	size_t count;
 
 	length_of_string = ft_strlen((char*)str);
 	count = 0;
@@ -75,8 +75,8 @@ char *dest, char *finishing_address)
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed_str;
-	int		left_trim;
-	int		right_trim;
+	size_t	left_trim;
+	size_t	right_trim;
 
 	left_trim = ft_get_length_of_left_trim(s1, set);
 	right_trim = ft_get_length_of_right_trim(s1, set);
