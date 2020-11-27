@@ -14,22 +14,17 @@
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	int		count;
 	int		len;
 	char	*last_pos;
 
-	count = 0;
 	len = ft_strlen((char*)str);
-	if (len == 0)
-		return (NULL);
 	while (len >= 0)
 	{
 		if (str[len] == (unsigned char)ch)
 		{
 			last_pos = (char*)&str[len];
-			return ((char*)last_pos);
+			return (last_pos);
 		}
-		count++;
 		len--;
 	}
 	return (NULL);
