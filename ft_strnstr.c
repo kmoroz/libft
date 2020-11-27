@@ -22,28 +22,28 @@ static int		is_empty(const char *s2)
 static char		*find_substring(const char *s1, const char *s2, size_t n)
 {
 	char	*result;
-	size_t	count_array[2];
+	size_t	count[2];
 
-	count_array[0] = 0;
+	count[0] = 0;
 	result = NULL;
-	while (count_array[0] < n && result == NULL)
+	while (count[0] < n && result == NULL)
 	{
-		count_array[1] = 0;
-		if (s1[count_array[0]] == s2[count_array[1]])
+		count[1] = 0;
+		if (s1[count[0]] == s2[count[1]])
 		{
-			result = (char *)s1 + count_array[0];
-			while (s2[count_array[1]] != '\0' && count_array[0] <= n)
+			result = (char *)s1 + count[0];
+			while (s2[count[1]] != '\0')
 			{
-				if (s1[count_array[0]] != s2[count_array[1]])
+				if (s1[count[0]] != s2[count[1]] || count[0] == n)
 				{
 					result = NULL;
 					break ;
 				}
-				count_array[0]++;
-				count_array[1]++;
+				count[0]++;
+				count[1]++;
 			}
 		}
-		count_array[0]++;
+		count[0]++;
 	}
 	return (result);
 }
