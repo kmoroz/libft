@@ -52,6 +52,8 @@ char			*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	if (is_empty(s2) == 1)
 		return ((char*)s1);
+	if (!s1)
+		return (NULL);
 	if (ft_strlen((char*)s1) < ft_strlen((char*)s2))
 		return (NULL);
 	if (ft_strlen((char*)s1) < n)
