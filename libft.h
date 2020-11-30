@@ -57,5 +57,6 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int arg);
 int				ft_toupper(int arg);
 t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstnew(void *content);
 
 #endif
