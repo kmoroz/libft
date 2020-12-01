@@ -6,7 +6,7 @@
 #    By: ksmorozo <ksmorozo@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/10 19:37:56 by ksmorozo      #+#    #+#                  #
-#    Updated: 2020/12/01 10:11:01 by ksmorozo      ########   odam.nl          #
+#    Updated: 2020/12/01 10:48:03 by ksmorozo      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ BSRCS = ft_lstnew.c ft_lstadd_front.c \
 ft_lstsize.c ft_lstlast.c \
 ft_lstadd_back.c ft_lstiter.c \
 ft_lstdelone.c ft_lstclear.c
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BSRCS:.c=.o)
 CC = cc
