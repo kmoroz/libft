@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:35:51 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/09 11:35:51 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/01 09:58:34 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,3 @@ char		**ft_split(char const *str, char dlm)
 	free(trimed_str);
 	return (result);
 }
-/*
-** int main()
-** {
-** 	char str[] = "split       this for   me  !";
-** 	char c = ' ';
-** 	ft_split(str, c);
-** }
-*/
