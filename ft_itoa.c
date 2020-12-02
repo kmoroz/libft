@@ -6,11 +6,12 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 12:21:46 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/01 18:48:30 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 19:11:02 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		count_int_length(int n)
 {
@@ -37,7 +38,7 @@ static int		copy_digit(int n, int length, char *dest)
 	return (n);
 }
 
-char		*ft_itoa(int n)
+static char		*copy(int n)
 {
 	char	*dest;
 	int		count;
@@ -49,8 +50,6 @@ char		*ft_itoa(int n)
 	if (n < 0)
 		n = n * -1;
 	length = count_int_length(n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	dest = (char*)malloc(length + is_negative_number + 1);
 	if (dest == NULL)
 		return (NULL);
@@ -67,11 +66,9 @@ char		*ft_itoa(int n)
 	return (dest);
 }
 
-int main()
+char			*ft_itoa(int n)
 {
-	char *result1; //char *result2; char *result3;char *result4;
-	result1 = ft_itoa(-2147483648);
-	//result2 = ft_itoa(156);
-	// result3 = ft_itoa(-1234);
-	// result4 = ft_itoa(-623);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	return (copy(n));
 }
