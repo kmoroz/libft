@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 18:01:12 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/30 18:01:12 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:29:03 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *str, int ch)
 	int		len;
 	char	*last_pos;
 
-	len = ft_strlen((char*)str);
+	len = ft_strlen(str);
 	while (len >= 0)
 	{
 		if (str[len] == (unsigned char)ch)
