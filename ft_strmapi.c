@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 20:45:18 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/04 20:45:18 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:23:01 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	count;
 
 	count = 0;
-	new_s = (char*)malloc(ft_strlen((char*)s) + 1);
+	new_s = (char*)malloc(ft_strlen(s) + 1);
 	if (new_s == NULL)
 		return (NULL);
 	while (s[count] != '\0')
@@ -31,12 +31,3 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_s[count] = '\0';
 	return (new_s);
 }
-/*
-** int main()
-** {
-** 	char *result;
-** 	char test[] = "zhopa";
-**
-** 	result = ft_strmapi(test, sub_function);
-** }
-*/
