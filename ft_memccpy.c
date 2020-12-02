@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 19:27:11 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/31 19:27:11 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:37:24 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-** int main()
-** {
-** 	char source[] = "string with\200inside !";
-** 	char dest[] = "abcdefghijklmnopqrstuvwxyz";
-** 	char source2[] = "string with\200inside !";
-** 	char dest2[] = "abcdefghijklmnopqrstuvwxyz";
-** 	printf("%d", ft_memccpy(dest, source, 0600, 21));
-** 	printf("%d", memccpy(dest2, source2, 0600, 21));
-** }
-*/

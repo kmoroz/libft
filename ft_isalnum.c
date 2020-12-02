@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 12:33:33 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/30 12:33:33 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:36:32 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,3 @@ int	ft_isalnum(int argument)
 		return (1);
 	return (0);
 }
-/*
-** int main()
-** {
-** 	int result;
-** 	int result2;
-**
-** 	result = ft_isalnum(0);
-** 	result2 = isalnum(0);
-** }
-*/

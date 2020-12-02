@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 11:18:47 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/30 11:18:47 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:45:37 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ char	*ft_strchr(const char *str, int ch)
 	}
 	return ((char*)modifiable_str);
 }
-/*
-** int main()
-** {
-** 	char my_thoughts[] = "help";
-** 	printf("%s", ft_strchr(my_thoughts, 'e'));
-** }
-*/

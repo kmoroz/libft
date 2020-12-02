@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:29:07 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/09 11:29:07 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:43:08 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (buffer);
 }
-/*
-** int main()
-** {
-** 	ft_memset("", 'A', 0);
-** 	memset("", 'A', (0));
-** }
-*/

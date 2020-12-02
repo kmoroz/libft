@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 18:14:12 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/01 18:14:12 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:48:36 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_strncmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-/*
-** int main()
-** {
-** 	char s1[] = "atoms\0\0\0\0";
-** 	char s2[] = "atoms\0abc";
-** 	char s3[] = "atomsaaa";
-**
-** 	int result = ft_strncmp(s1, s2, 8);
-** }
-*/

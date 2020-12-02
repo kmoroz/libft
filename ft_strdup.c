@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 12:20:11 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:05:15 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/02 23:47:42 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,3 @@ char	*ft_strdup(const char *src)
 	ft_strlcpy(dest, src, ft_strlen(src) + 1);
 	return (dest);
 }
-/*
-** int main()
-** {
-** 	char source[] = "souce";
-** 	printf("%s", source);
-** }
-*/

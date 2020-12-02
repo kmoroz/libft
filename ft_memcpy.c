@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:23:09 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/09 11:23:09 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:41:59 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-** int main()
-** {
-** 	char source[] = '"Quiz"';
-** 	char dest[] = "Geeks";
-** 	char source2[] = "Quiz";
-** 	char dest2[] = "Geeks";
-** 	ft_memcpy(dest, source, 5);
-** 	memcpy(dest2, source2, 5);
-** }
-*/

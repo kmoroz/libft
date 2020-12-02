@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 17:12:06 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/30 17:12:06 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:49:55 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_toupper(int arg)
 		return (arg - 32);
 	return (arg);
 }
-/*
-** int main()
-** {
-** 	printf("%c", ft_toupper('Y'));
-** 	printf("%c", ft_toupper(' '));
-** 	printf("%c", ft_toupper('u'));
-** 	printf("%c", ft_toupper('?'));
-** }
-*/
