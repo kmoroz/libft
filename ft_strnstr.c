@@ -6,18 +6,11 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 13:21:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/01 13:21:02 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 18:23:11 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int		is_empty(const char *s2)
-{
-	if (s2[0] == '\0')
-		return (1);
-	return (0);
-}
 
 static char		*find_substring(const char *s1, const char *s2, size_t n)
 {
@@ -50,7 +43,7 @@ static char		*find_substring(const char *s1, const char *s2, size_t n)
 
 char			*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	if (is_empty(s2) == 1)
+	if (!*s2)
 		return ((char*)s1);
 	if (n == 0)
 		return (NULL);
