@@ -6,13 +6,13 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 13:03:49 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/29 13:03:49 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:00:09 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int count;
 
