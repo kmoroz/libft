@@ -6,11 +6,11 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 13:03:49 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:00:09 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:13:17 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *str)
 
 	count = 0;
 	while (str[count] != '\0')
-	{
 		count++;
-	}
 	return (count);
 }

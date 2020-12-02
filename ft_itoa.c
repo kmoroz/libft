@@ -6,12 +6,12 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 12:21:46 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 19:11:02 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:17:29 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static int		count_int_length(int n)
 {

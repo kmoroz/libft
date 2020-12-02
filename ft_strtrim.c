@@ -6,11 +6,12 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 13:44:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:30:41 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:15:24 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int		ft_char_in_set(char const *set, char c)
 {

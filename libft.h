@@ -6,15 +6,14 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/10 11:43:49 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:00:58 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:13:47 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
+# include <stddef.h>
 
 typedef struct	s_list
 {

@@ -6,11 +6,11 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 14:35:26 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:40:57 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:04:41 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {

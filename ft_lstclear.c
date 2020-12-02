@@ -6,11 +6,12 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/28 15:56:41 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/28 15:56:41 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/03 00:19:46 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

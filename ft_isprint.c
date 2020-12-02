@@ -6,11 +6,9 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 16:58:34 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/10/30 16:58:34 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:58:56 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int arg)
 {

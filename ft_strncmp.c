@@ -6,11 +6,11 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 18:14:12 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:48:36 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 00:10:57 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	ft_strncmp(const void *ptr1, const void *ptr2, size_t num)
 {
