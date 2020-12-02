@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 13:21:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 18:23:11 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/02 23:27:57 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ char			*ft_strnstr(const char *s1, const char *s2, size_t n)
 		return ((char*)s1);
 	if (n == 0)
 		return (NULL);
-	if (ft_strlen((char*)s1) < ft_strlen((char*)s2))
+	if (ft_strlen(s1) < ft_strlen(s2))
 		return (NULL);
-	if (ft_strlen((char*)s1) < n)
-		return (find_substring(s1, s2, ft_strlen((char*)s1)));
+	if (ft_strlen(s1) < n)
+		return (find_substring(s1, s2, ft_strlen(s1)));
 	return (find_substring(s1, s2, n));
 }
