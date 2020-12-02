@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 13:31:41 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/03 13:31:41 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/02 23:32:13 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char*)malloc(len + 1);
 	if (substr == NULL)
 		return (NULL);
-	if ((unsigned int)ft_strlen((char*)s) <= start)
+	if ((unsigned int)ft_strlen(s) <= start)
 		return (substr);
 	count = 0;
 	while (s[start] != '\0' && count < len)
@@ -32,11 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[count] = '\0';
 	return (substr);
 }
-/*
-** int main()
-** {
-** 	char big_string[] = "01234";
-** 	char *result;
-** 	result = ft_substr(big_string, 7, 10);
-** }
-*/
