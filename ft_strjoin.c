@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 13:44:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:17:47 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 11:17:50 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(new_str + ft_strlen(s1), s2, ft_strlen(s2) + 1);
 	return (new_str);
 }
-
