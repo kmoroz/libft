@@ -6,7 +6,7 @@
 #    By: ksmorozo <ksmorozo@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/10 19:37:56 by ksmorozo      #+#    #+#                  #
-#    Updated: 2020/12/03 12:22:40 by anonymous     ########   odam.nl          #
+#    Updated: 2020/12/03 22:09:44 by anonymous     ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-so: 
+so:
 	$(CC) -shared -o libft.so -fPIC $(REG_OBJ_FILES) $(BONUS_OBJ_FILES)
 
 bonus:
