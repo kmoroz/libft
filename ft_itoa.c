@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 12:21:46 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:17:29 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/03 20:49:10 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ static char		*copy(int n)
 	if (dest == NULL)
 		return (NULL);
 	length += is_negative_number;
-	while (length > (0 - is_negative_number))
+	dest[length] = '\0';
+	while (length > (0 + is_negative_number))
 	{
 		n = copy_digit(n, length, dest);
 		count++;
@@ -62,7 +63,6 @@ static char		*copy(int n)
 	}
 	if (is_negative_number == 1)
 		dest[0] = '-';
-	dest[count - is_negative_number] = '\0';
 	return (dest);
 }
 
