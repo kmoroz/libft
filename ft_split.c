@@ -6,11 +6,12 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:35:51 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/01 09:58:34 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/03 00:14:54 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static char	**free_all(char **final_array)
 {
