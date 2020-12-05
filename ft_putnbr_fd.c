@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 13:38:36 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/11/05 13:38:36 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2020/12/05 08:52:28 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(number / 10, fd);
 	ft_putchar_fd(number % 10 + '0', fd);
 }
-/*
-** int main()
-** {
-** 	ft_putnbr_fd(-5675, 1);
-** }
-*/
