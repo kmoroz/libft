@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 20:45:18 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:16:06 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/07 13:38:51 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new_s[count] = (*f)(count, s[count]);
 		count++;
 	}
-	if (new_s == NULL)
-		return (NULL);
 	new_s[count] = '\0';
 	return (new_s);
 }
