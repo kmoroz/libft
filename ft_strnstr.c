@@ -6,50 +6,32 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 13:21:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:27:57 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/07 13:34:59 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*find_substring(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	char	*result;
-	size_t	count[2];
+	size_t	count_big_string;
+	int		result;
 
-	count[0] = 0;
-	result = NULL;
-	while (count[0] < n && result == NULL)
-	{
-		count[1] = 0;
-		if (s1[count[0]] == s2[count[1]])
-		{
-			result = (char *)s1 + count[0];
-			while (s2[count[1]] != '\0')
-			{
-				if (s1[count[0]] != s2[count[1]] || count[0] == n)
-				{
-					result = NULL;
-					break ;
-				}
-				count[0]++;
-				count[1]++;
-			}
-		}
-		count[0]++;
-	}
-	return (result);
-}
-
-char			*ft_strnstr(const char *s1, const char *s2, size_t n)
-{
+	count_big_string = 0;
+	result = ft_strncmp(s1, s2, n);
 	if (!*s2)
 		return ((char*)s1);
-	if (n == 0)
+	if (ft_strlen(s1) < ft_strlen(s2) || n == 0)
 		return (NULL);
-	if (ft_strlen(s1) < ft_strlen(s2))
-		return (NULL);
-	if (ft_strlen(s1) < n)
-		return (find_substring(s1, s2, ft_strlen(s1)));
-	return (find_substring(s1, s2, n));
+	if (result == 0)
+		return ((char*)s1);
+	while (result != 0 && count_big_string < n
+	&& n - count_big_string >= ft_strlen(s2))
+	{
+		result = ft_strncmp((char*)s1 + count_big_string, s2, ft_strlen(s2));
+		if (result == 0)
+			return ((char*)s1 + count_big_string);
+		count_big_string++;
+	}
+	return (NULL);
 }
