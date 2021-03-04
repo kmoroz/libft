@@ -28,9 +28,9 @@
 | `isalnum(int c)` | Checks for an alphanumeric character. |
 | `isascii(int c)` | Checks whether c is a 7-bit unsigned char value that fits into the ASCII character set. |
 | `isprint(int c)` | Checks for any printable character including space. |
-| `toupper(int c)` | If c is a lowercase letter, `toupper()` returns its uppercase equivalent, if an uppercase representation exists in the current locale.  Otherwise, it returns c. |
-| `tolower(int c)` | If c is an uppercase letter, `tolower()` returns its lowercase equivalent, if a lowercase representation exists in the current locale.  Otherwise, it returns c. |
-| `calloc(size_t nmemb, size_t size)` | The  `calloc()` function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory. The memory is set to zero. If nmemb or size is 0, then `calloc()` returns either NULL, or a unique pointer value that can later be successfully passed to `free()`. |
+| `toupper(int c)` | If c is a lowercase letter, `toupper()` returns its uppercase equivalent, if an uppercase representation exists in the current locale. Otherwise, it returns c. |
+| `tolower(int c)` | If c is an uppercase letter, `tolower()` returns its lowercase equivalent, if a lowercase representation exists in the current locale. Otherwise, it returns c. |
+| `calloc(size_t nmemb, size_t size)` | The `calloc()` function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory. The memory is set to zero. If nmemb or size is 0, then `calloc()` returns either NULL, or a unique pointer value that can later be successfully passed to `free()`. |
 | `strdup(const char *s)` | The `strdup()` function returns a pointer to a new string which is a duplicate of the string s. Memory for the new string is obtained with `malloc()`, and can be freed with `free()`. |
 | `ft_substr(char const *s, unsigned int start, size_t len)` | Allocates (with `malloc()`) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’. |
 | `ft_strjoin(char const *s1, char const *s2)` | Allocates (with `malloc()`) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’. |
@@ -52,5 +52,5 @@
 
 ## 💩 Moulinette Results
 
-![Moulinette](Capture.JPG)
+![Moulinette](https://github.com/kmoroz/kmoroz/blob/master/Capture.JPG?raw=true)
 
