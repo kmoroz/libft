@@ -36,6 +36,20 @@
 | `ft_strjoin(char const *s1, char const *s2)` | Allocates (with `malloc()`) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’. |
 | `ft_strtrim(char const *s1, char const *set)` | Allocates (with `malloc()`) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string. |
 
+## 🎰 Bonus Functions
+
+| Function | Description |
+| --- | --- |
+| `ft_lstnew(void *content)` | Allocates (with `malloc()`) and returns a new element. The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL. |
+| `ft_lstadd_front(t_list **lst, t_list *new)` | Adds the element ’new’ at the beginning of the list. |
+| `ft_lstsize(t_list *lst)` | Counts the number of elements in a list. |
+| `ft_lstlast(t_list *lst)` | Returns the last element of the list. |
+| `ft_lstadd_back(t_list **lst, t_list *new)` | Adds the element ’new’ at the end of the list. |
+| `ft_lstdelone(t_list *lst, void (*del)(void *))` | Takes as a parameter an element and frees the memory of the element’s content using the function ’del’ given as a parameter and free the element. The memory of ’next’ must not be freed. |
+| `ft_lstclear(t_list **lst, void (*del)(void *))` | Deletes and frees the given element and every successor of that element, using the function ’del’ and `free()`. Finally, the pointer to the list must be set to NULL. |
+| `ft_lstiter(t_list *lst, void (*f)(void *))` | Iterates the list ’lst’ and applies the function ’f’ to the content of each element. |
+| `ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))` | Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed. |
+
 ## 💩 Moulinette Results
 
 ![Moulinette](Capture.JPG)
