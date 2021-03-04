@@ -6,7 +6,7 @@
 
 ## ❕ Must Have Functions
 
-| Prototype | Description |
+| Function | Description |
 | --- | --- |
 | `memset(void *s, int c, size_t n)` | The `memset()` function fills the first n bytes of the memory area pointed to by s with the constant byte c. |
 | `bzero(void *s, size_t n)` | The `bzero()` function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeroes (bytes containing '\0') to that area. |
@@ -23,18 +23,18 @@
 | `strnstr(const char *big, const char *little, size_t len)` | The `strnstr()` function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched.  Characters that appear after a ‘\0’ character are not searched. |
 | `strncmp(const char *s1, const char *s2, size_t n)` | The `strncmp()` function is similar, except it compares only the first (at most) n bytes of s1 and s2. |
 | `atoi(const char *nptr)` | The `atoi()` function converts the initial portion of the string pointed to by nptr to int. |
-| `isalpha` | Checks for an alphabetic character. |
-| `isdigit` | Checks for a digit (0 through 9). |
-| `isalnum` | Checks for an alphanumeric character. |
-| `isascii` | Checks whether c is a 7-bit unsigned char value that fits into the ASCII character set. |
-| `isprint` | Checks for any printable character including space. |
-| `toupper` | If c is a lowercase letter, `toupper()` returns its uppercase equivalent, if an uppercase representation exists in the current locale.  Otherwise, it returns c. |
-| `tolower` | If c is an uppercase letter, `tolower()` returns its lowercase equivalent, if a lowercase representation exists in the current locale.  Otherwise, it returns c. |
+| `isalpha(int c)` | Checks for an alphabetic character. |
+| `isdigit(int c)` | Checks for a digit (0 through 9). |
+| `isalnum(int c)` | Checks for an alphanumeric character. |
+| `isascii(int c)` | Checks whether c is a 7-bit unsigned char value that fits into the ASCII character set. |
+| `isprint(int c)` | Checks for any printable character including space. |
+| `toupper(int c)` | If c is a lowercase letter, `toupper()` returns its uppercase equivalent, if an uppercase representation exists in the current locale.  Otherwise, it returns c. |
+| `tolower(int c)` | If c is an uppercase letter, `tolower()` returns its lowercase equivalent, if a lowercase representation exists in the current locale.  Otherwise, it returns c. |
 | `calloc(size_t nmemb, size_t size)` | The  `calloc()` function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory. The memory is set to zero. If nmemb or size is 0, then `calloc()` returns either NULL, or a unique pointer value that can later be successfully passed to `free()`. |
 | `strdup(const char *s)` | The `strdup()` function returns a pointer to a new string which is a duplicate of the string s. Memory for the new string is obtained with `malloc()`, and can be freed with `free()`. |
-| `ft_substr` | Allocates (with `malloc()`) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’. |
-| `strdup` | The `strdup(const char *s)` function returns a pointer to a new string which is a duplicate of the string s. Memory for the new string is obtained with `malloc()`, and can be freed with `free()`. |
-| `strdup` | The `strdup(const char *s)` function returns a pointer to a new string which is a duplicate of the string s. Memory for the new string is obtained with `malloc()`, and can be freed with `free()`. |
+| `ft_substr(char const *s, unsigned int start, size_t len)` | Allocates (with `malloc()`) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’. |
+| `ft_strjoin(char const *s1, char const *s2)` | Allocates (with `malloc()`) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’. |
+| `ft_strtrim(char const *s1, char const *set)` | Allocates (with `malloc()`) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string. |
 
 ## 💩 Moulinette Results
 
