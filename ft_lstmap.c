@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/28 17:27:28 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 22:53:50 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:16:52 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_list;
-	t_list *new_link;
+	t_list	*new_list;
+	t_list	*new_link;
 
 	new_list = NULL;
 	while (lst)

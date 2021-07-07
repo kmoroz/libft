@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 13:31:41 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:16:33 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:20:36 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*substr;
 	unsigned int	count;
 
-	substr = (char*)malloc(len + 1);
+	substr = (char *)malloc(len + 1);
 	if (substr == NULL)
 		return (NULL);
 	if ((unsigned int)ft_strlen(s) <= start)

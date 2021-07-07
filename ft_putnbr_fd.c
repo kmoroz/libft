@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 13:38:36 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/05 08:52:28 by ksmorozo      ########   odam.nl         */
+/*   Updated: 2021/07/07 12:17:48 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long number;
+	long	number;
 
 	number = (long)n;
 	if (number < 0)

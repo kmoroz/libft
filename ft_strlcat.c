@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 18:39:32 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:19:16 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:18:51 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dest_size;
-	size_t count;
-	size_t src_size;
+	size_t	dest_size;
+	size_t	count;
+	size_t	src_size;
 
 	count = 0;
 	dest_size = ft_strlen(dst);

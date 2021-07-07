@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:35:51 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:14:54 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:18:19 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static char	**free_all(char **final_array)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (final_array[count])
@@ -29,7 +29,7 @@ static char	**free_all(char **final_array)
 
 static int	get_word_count(char *str, char delimiter)
 {
-	int count;
+	int	count;
 
 	count = 1;
 	if (ft_strlen(str) == 0)
@@ -49,7 +49,7 @@ static int	get_word_count(char *str, char delimiter)
 
 static int	number_of_delimeters_to_skip(char *trimed_str, char dlm)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*trimed_str == dlm)
@@ -67,7 +67,7 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 	char	*start;
 
 	count = 0;
-	final_array = (char**)malloc((word_count + 1) * sizeof(char *));
+	final_array = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (final_array == NULL)
 		return (NULL);
 	while (count < word_count)
@@ -75,7 +75,7 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 		start = trimed_str;
 		while (*trimed_str != dlm && *trimed_str)
 			trimed_str++;
-		final_array[count] = (char*)malloc(trimed_str - start + 1);
+		final_array[count] = (char *)malloc(trimed_str - start + 1);
 		if (!(final_array[count]))
 			free_all(final_array);
 		ft_strlcpy(final_array[count], start, trimed_str - start + 1);
@@ -86,7 +86,7 @@ static char	**split(char *trimed_str, char dlm, int word_count)
 	return (final_array);
 }
 
-char		**ft_split(char const *str, char dlm)
+char	**ft_split(char const *str, char dlm)
 {
 	int		word_count;
 	char	*trimed_str;
@@ -95,7 +95,7 @@ char		**ft_split(char const *str, char dlm)
 	trimed_str = ft_strtrim(str, &dlm);
 	if (trimed_str == NULL)
 		return (NULL);
-	word_count = get_word_count((char*)trimed_str, dlm);
+	word_count = get_word_count((char *)trimed_str, dlm);
 	result = split(trimed_str, dlm, word_count);
 	free(trimed_str);
 	return (result);

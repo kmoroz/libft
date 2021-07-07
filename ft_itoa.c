@@ -6,14 +6,14 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 12:21:46 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 20:49:10 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:16:11 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int		count_int_length(int n)
+static int	count_int_length(int n)
 {
 	int		length;
 
@@ -28,7 +28,7 @@ static int		count_int_length(int n)
 	return (length);
 }
 
-static int		copy_digit(int n, int length, char *dest)
+static int	copy_digit(int n, int length, char *dest)
 {
 	char	digit;
 
@@ -38,35 +38,43 @@ static int		copy_digit(int n, int length, char *dest)
 	return (n);
 }
 
-static char		*copy(int n)
+static void	is_negative_number(int *is_negative_num, int n)
+{
+	if (n < 0)
+		*is_negative_num = 1;
+	else
+		*is_negative_num = 0;
+}
+
+static char	*copy(int n)
 {
 	char	*dest;
 	int		count;
 	int		length;
-	int		is_negative_number;
+	int		is_negative_num;
 
 	count = 0;
-	is_negative_number = n < 0 ? 1 : 0;
+	is_negative_number(&is_negative_num, n);
 	if (n < 0)
 		n = n * -1;
 	length = count_int_length(n);
-	dest = (char*)malloc(length + is_negative_number + 1);
+	dest = (char *)malloc(length + is_negative_num + 1);
 	if (dest == NULL)
 		return (NULL);
-	length += is_negative_number;
+	length += is_negative_num;
 	dest[length] = '\0';
-	while (length > (0 + is_negative_number))
+	while (length > (0 + is_negative_num))
 	{
 		n = copy_digit(n, length, dest);
 		count++;
 		length--;
 	}
-	if (is_negative_number == 1)
+	if (is_negative_num == 1)
 		dest[0] = '-';
 	return (dest);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 11:18:47 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:08:58 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:18:27 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(const char *str, int ch)
 			return (NULL);
 		modifiable_str++;
 	}
-	return ((char*)modifiable_str);
+	return ((char *)modifiable_str);
 }

@@ -6,14 +6,14 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 13:44:02 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:15:24 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:20:28 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int		ft_char_in_set(char const *set, char c)
+static int	ft_char_in_set(char const *set, char c)
 {
 	while (*set)
 	{
@@ -24,10 +24,10 @@ static int		ft_char_in_set(char const *set, char c)
 	return (0);
 }
 
-static int		ft_get_length_of_left_trim(char const *str, char const *set)
+static int	ft_get_length_of_left_trim(char const *str, char const *set)
 {
-	size_t length_of_string;
-	size_t count;
+	size_t	length_of_string;
+	size_t	count;
 
 	length_of_string = ft_strlen(str);
 	count = 0;
@@ -41,10 +41,10 @@ static int		ft_get_length_of_left_trim(char const *str, char const *set)
 	return (count);
 }
 
-static int		ft_get_length_of_right_trim(char const *str, char const *set)
+static int	ft_get_length_of_right_trim(char const *str, char const *set)
 {
-	int length_of_string;
-	int count;
+	int	length_of_string;
+	int	count;
 
 	length_of_string = ft_strlen(str);
 	count = 0;
@@ -61,7 +61,7 @@ static int		ft_get_length_of_right_trim(char const *str, char const *set)
 	return (count);
 }
 
-static void		copy(char *starting_address,
+static void	copy(char *starting_address,
 char *dest, char *finishing_address)
 {
 	while (starting_address != finishing_address)
@@ -73,7 +73,7 @@ char *dest, char *finishing_address)
 	*dest = '\0';
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed_str;
 	size_t	left_trim;
@@ -83,17 +83,17 @@ char			*ft_strtrim(char const *s1, char const *set)
 	right_trim = ft_get_length_of_right_trim(s1, set);
 	if (left_trim == ft_strlen(s1))
 	{
-		trimmed_str = (char*)malloc(1);
+		trimmed_str = (char *)malloc(1);
 		if (trimmed_str == NULL)
 			return (NULL);
 		trimmed_str[0] = '\0';
 		return (trimmed_str);
 	}
-	trimmed_str = (char*)malloc(ft_strlen(s1)
-	- (left_trim + right_trim) + 1);
+	trimmed_str = (char *)malloc(ft_strlen(s1)
+			- (left_trim + right_trim) + 1);
 	if (trimmed_str == NULL)
 		return (NULL);
-	copy((char*)s1 + left_trim, trimmed_str,
-	(char*)s1 + (ft_strlen(s1) - right_trim));
+	copy((char *)s1 + left_trim, trimmed_str,
+		(char *)s1 + (ft_strlen(s1) - right_trim));
 	return (trimmed_str);
 }

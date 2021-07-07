@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 19:27:11 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:03:49 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:17:08 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	*buffer2;
 	size_t			count;
 
-	buffer1 = (unsigned char*)src;
-	buffer2 = (unsigned char*)dest;
+	buffer1 = (unsigned char *)src;
+	buffer2 = (unsigned char *)dest;
 	count = 0;
 	while (count < n)
 	{

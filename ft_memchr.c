@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 20:25:23 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:04:26 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:17:14 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	size_t	count;
 	char	*buffer;
 
-	buffer = (char*)str;
+	buffer = (char *)str;
 	count = 0;
 	while (count < n)
 	{

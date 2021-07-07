@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/30 18:01:12 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/02 23:29:03 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:19:36 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *str, int ch)
 	{
 		if (str[len] == (unsigned char)ch)
 		{
-			last_pos = (char*)&str[len];
+			last_pos = (char *)&str[len];
 			return (last_pos);
 		}
 		len--;

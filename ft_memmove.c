@@ -6,7 +6,7 @@
 /*   By: ksmorozo <ksmorozo@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 11:25:39 by ksmorozo      #+#    #+#                 */
-/*   Updated: 2020/12/03 00:05:54 by anonymous     ########   odam.nl         */
+/*   Updated: 2021/07/07 12:17:34 by ksmorozo      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (src == dest)
 		return (dest);
-	source = (unsigned char*)src;
-	destination = (unsigned char*)dest;
+	source = (unsigned char *)src;
+	destination = (unsigned char *)dest;
 	count = n - 1;
 	if (source < destination)
 	{
